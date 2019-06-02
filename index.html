@@ -24,16 +24,17 @@
       
       <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
       <a-marker preset="hiro">
-          <a-obj-model
-                       id="redandblue" src="#redandblue-obj" mtl="#redandblue-mtl" position="0 0 0" scale="1.2 1.2 1.2"
-                       animation="property: rotation; loop: true; dur: 8000">
-          </a-obj-model>
-          
-          <a-text
-                  value="Hello Rietveld ！!！" position="0 2 0" align="center" >
-          </a-text>
+          <a-obj-model id="redandblue" src="#redandblue-obj" mtl="#redandblue-mtl" position="0 0 0" scale="1.2 1.2 1.2"></a-obj-model>
+    
+          <a-text value="Hello Rietveld ！!！" position="0 1.8 0" align="center" ></a-text>
           
           <a-box position="0 -0.1 0" scale="1.2 0.05 1.2" material='color: white;'></a-box>
+      </a-marker>
+    
+        <!-- マーカーを登録（「skita」マーカー） -->
+      <a-marker type='pattern' url='./marker/skita16.pat'>
+        <a-box scale=".25 .25 .25" position="0 .5 0" color="#2cb255">
+        </a-box>
       </a-marker>
 
       <!-- AR用のカメラを置く -->
