@@ -13,7 +13,7 @@
     <body style='margin:px; overflow:hidden;'>
 
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIは非表示） -->
-    <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled:false">
+    <a-scene embedded arjs="debugUIEnabled:false; trackingMethod:best; " vr-mode-ui="enabled:false">
 
       <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
       <a-assets>
@@ -24,15 +24,16 @@
       
       <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
       <a-marker preset="hiro">
-      
-        <a-obj-model id="redandblue" src="#redandblue-obj" mtl="#redandblue-mtl" position="0 0 0" scale="0.01 0.01 0.01" rotation="-90 0 0"></a-obj-model>
-        <a-text value="Hello Rietveld ！!！" position="0 2 0" align="center"></a-text>
-
-        <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-        <!--<a-box position="0 0 0" wireframe="true"></a-box>-->
+          <a-obj-model
+                       id="redandblue" src="#redandblue-obj" mtl="#redandblue-mtl" position="0 0 0" scale="1.2 1.2 1.2"
+                       animation="property: rotation; loop: true; dur: 8000">
+          </a-obj-model>
           
-        <!--<a-box position="0 0 0" animation="property: rotation; to: 0 90 0; loop: true"></a-box>-->
+          <a-text
+                  value="Hello Rietveld ！!！" position="0 2 0" align="center" >
+          </a-text>
           
+          <a-box position="0 -0.1 0" scale="1.2 0.05 1.2" material='color: white;'></a-box>
       </a-marker>
 
       <!-- AR用のカメラを置く -->
