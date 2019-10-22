@@ -34,10 +34,24 @@
       </a-marker>
     
         <!-- マーカーを登録（「skita」マーカー） -->
-      <a-marker type='pattern' url='./marker/skita16.pat'>
-          <a-obj-model id="ar_batu" src="#ar_batu-obj" mtl="#ar_batu-mtl" position="0 0.2 0" scale="0.05 0.05 0.05"></a-obj-model>
-          <!-- <a-box scale=".25 .25 .25" position="0 .5 0" color="#338be3"></a-box> -->
-      </a-marker>
+    <a-marker type='pattern' url='./marker/skita16.pat'>
+        <a-obj-model
+                     id="ar_batu"
+                     src="#ar_batu-obj"
+                     mtl="#ar_batu-mtl"
+                     position="0 0.2 0"
+                     scale="0.05 0.05 0.05">
+            <a-animation
+                         attribute="rotation"
+                         from="0 0 0"
+                         to="0 360 0"
+                         dur="5000"
+                         repeat="indefinite"
+                         easing="linear">
+            </a-animation>
+                    <!-- <a-box scale=".25 .25 .25" position="0 .5 0" color="#338be3"></a-box> -->
+        </a-obj-model>
+    </a-marker>
 
       <!-- AR用のカメラを置く -->
       <a-entity camera></a-entity>
